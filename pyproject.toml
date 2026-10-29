@@ -1,0 +1,14 @@
+[project]
+name = "affine-transform-composition"
+version = "0.1.0"
+description = "Build 2D affine transforms from translation, rotation, scale, and shear into one 3×3 matrix via chainable methods"
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
