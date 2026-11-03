@@ -32,3 +32,10 @@ Composed transforms apply right-to-left. `translate(100, 0).rotate(θ).apply(0, 
 - `.translate(dx, dy)`, `.rotate(angle_radians)`, `.rotate_degrees(angle_degrees)`, `.scale(sx, sy)`, `.shear(kx, ky)` — return new `AffineTransform`.
 - `.apply(x, y)` — return `(x', y')` tuple of floats.
 - `.matrix()` — return row-major list of 3 lists, length 3, floats.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
