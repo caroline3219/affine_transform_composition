@@ -1,6 +1,6 @@
 [project]
 name = "affine-transform-composition"
-version = "0.1.2"
+version = "0.1.3"
 description = "Build 2D affine transforms from translation, rotation, scale, and shear into one 3×3 matrix via chainable methods"
 requires-python = ">=3.10"
 dependencies = []
